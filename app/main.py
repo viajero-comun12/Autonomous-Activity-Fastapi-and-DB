@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from sqlmodel import SQLModel
 from app.database import engine
 from app.routers import users, books
-from app import models  # Asegura que los modelos se carguen para crear las tablas
+from app import models 
 
 def create_db_and_tables():
     SQLModel.metadata.create_all(engine)
